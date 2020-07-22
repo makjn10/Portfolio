@@ -1,0 +1,238 @@
+/*Start global*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 2em;
+    font-family: 'Roboto' , sans-serif;
+    color : #eee;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #01172F;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Ranchers';
+    color : #eee;
+}
+
+section{
+    margin-top: 0.5em;
+}
+/*End global*/
+
+/*Start header*/
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    z-index: 100;
+    background-color: #01172F;
+}
+
+.top-nav{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding-left: 16%;
+    padding-right: 4%;
+}
+
+.nav-list{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    box-sizing: border-box;
+    display: flex;
+}
+.nav-list-item{
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 0.4em;
+    margin: auto auto;
+    font-size: 100%;
+    padding-right: 2%;
+    text-align: center;
+    letter-spacing: 0.08em;
+    visibility: hidden;
+}
+.nav-link::before{
+    content: attr(data-text);
+    letter-spacing: initial;
+    position: absolute;
+    visibility: visible;
+    transition: all 0.3s ease-out;
+}
+.nav-link:hover::before{
+    letter-spacing: 0.08rem;
+    color: #2292A4;
+}
+
+/*End header*/
+
+/*Start landing*/
+
+.landing{
+    z-index: 1;
+    width: 80%;
+    height: 100vh;
+    margin: auto auto;
+    padding-top: 4em;
+    box-sizing: border-box;
+    letter-spacing: 0.3em;
+    display: flex;
+    
+}
+.landing-name{
+    width: 50%;
+    font-size: 0.8em;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: auto auto;
+}
+.landing-image{
+    box-sizing: border-box;
+    margin: auto auto;
+    width: 50%;
+    text-align: center;
+}
+
+.landing-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5em;
+    border-top-right-radius: 5em;
+    border-bottom-left-radius: 5em;
+    border-top-left-radius: 2em;
+}
+
+/*End landing*/
+
+/*Start about*/
+
+.about{
+    background-color: #eee;
+    width: 90%;
+    height: 100vh;
+    color: #01172F;
+    display: flex;
+    margin: auto auto;
+    font-family: 'Architects Daughter';
+    padding-top: 6em;
+}
+
+.about-header{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto auto;
+    text-align: center;
+    color: #01172F;
+    padding-top: 2.6em;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+}
+
+.about-description{
+    font-size: 0.8em;
+    width: 50%;
+    height: 100%;
+    margin: auto auto;
+    color: #01172F;
+    padding-right: 3em;
+}
+
+.about-header h1 a{
+    color: #01172F;
+}
+/*End about*/
+
+
+/*Start journey*/
+.journey{
+    background-color: #01172F;
+    width: 90%;
+    height: 100vh;
+    color: #eee;
+    display: flex;
+    margin: auto auto;
+    font-family: 'Architects Daughter';
+    padding-top: 6em;
+}
+
+.journey-header{
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto auto;
+    text-align: center;
+    color: #eee;
+    padding-top: 2.6em;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    position: sticky;
+    top: 0;
+}
+
+
+.timeline li{
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+    /* padding-bottom: 1.5em;
+    border-bottom: #fcab10 2px solid;
+    padding-top: 1.5em; */
+}
+.timeline li:first-child{
+    padding-top: 0;
+}
+.timeline-item-details{
+    width: 70%;
+}
+.timeline-item-image{
+    width: 30%;
+    box-sizing: border-box;
+    padding-top: 1em;
+    text-align: center;
+}
+.timeline-item-description{
+    color: #eee;
+}
+.timeline-item-image img{
+    width: 5em;
+    height: 5em;
+    border-radius: 1000px;
+    border: #2292A4 solid 2px;
+}
+
+.journey-description{
+    font-size: 0.8em;
+    width: 60%;
+    height: 100%;
+    margin: auto auto;
+    color: #2292A4;
+    padding-right: 3em;
+}
+
+.journey-header h1 a{
+    color: #eee;
+}
+/*End journey*/
