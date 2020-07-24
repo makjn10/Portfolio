@@ -1,5 +1,4 @@
 /*Start global*/
-
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +16,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #01172F;
+    position: relative;
 }
 
 a{
@@ -85,12 +85,60 @@ header{
     color: #2292A4;
 }
 
+.menu-toggler{
+    position: fixed;
+    top: 0.5em;
+    left: 0.5rem;
+    width: 1.2em;
+    height: 1.2rem;
+    margin: auto auto;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+    display: none;
+}
+
+.menu-toggler.open{
+    transform: rotate(90deg);
+}
+
+.bar{
+    background: linear-gradient(to right, #eee, #2292A4);
+    width: 100%;
+    height: 4px;
+    border-radius: 8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81 ,0.57 ,0.57);
+}
+
+.open.bar.start{
+    transform: rotate(-450grad) translate(.8rem);
+} 
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81 ,0.57 ,0.57);
+}
+
+.open.bar.end{
+    transform: rotate(-450grad) translate(.8rem);
+}
+
+
 /*End header*/
 
 /*Start landing*/
 
 .landing{
-    z-index: 1;
     width: 80%;
     height: 100vh;
     margin: auto auto;
@@ -169,26 +217,22 @@ header{
 .journey{
     background-color: #01172F;
     width: 90%;
-    height: 100vh;
+    height: 100%;
     color: #eee;
-    display: flex;
     margin: auto auto;
     font-family: 'Architects Daughter';
-    padding-top: 6em;
 }
 
 .journey-header{
-    width: 40%;
-    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     margin: auto auto;
     text-align: center;
     color: #eee;
-    padding-top: 2.6em;
+    padding-top: 2em;
     letter-spacing: 0.1em;
     font-size: 2em;
-    position: sticky;
-    top: 0;
+    margin-bottom: 1em;
 }
 
 
@@ -197,12 +241,16 @@ header{
     list-style: none;
     box-sizing: border-box;
     padding-bottom: 1em;
-    /* padding-bottom: 1.5em;
-    border-bottom: #fcab10 2px solid;
-    padding-top: 1.5em; */
+    width: 100%;
 }
 .timeline li:first-child{
-    padding-top: 0;
+    padding-top: 0;  
+}
+.timeline li:nth-of-type(even){
+    padding-left: 50%;
+}
+.timeline li:nth-of-type(odd){
+    padding-right: 50%;
 }
 .timeline-item-details{
     width: 70%;
@@ -210,7 +258,7 @@ header{
 .timeline-item-image{
     width: 30%;
     box-sizing: border-box;
-    padding-top: 1em;
+    padding-top: 0.5em;
     text-align: center;
 }
 .timeline-item-description{
@@ -225,7 +273,7 @@ header{
 
 .journey-description{
     font-size: 0.8em;
-    width: 60%;
+    width: 100%;
     height: 100%;
     margin: auto auto;
     color: #2292A4;
@@ -236,3 +284,81 @@ header{
     color: #eee;
 }
 /*End journey*/
+
+
+/*Start projects*/
+.project{
+    background-color: #eee;
+    width: 90%;
+    height: 100vh;
+    color: #01172F;
+    margin: auto auto;
+    font-family: 'Architects Daughter';
+    margin-top: 5em;
+    padding-top: 4em;
+}
+
+.project-header{
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto auto;
+    text-align: center;
+    color: #01172F;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.project li{
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.project-item-image{
+    width: 30%;
+    box-sizing: border-box;
+    padding-top: 0.5em;
+    text-align: center;
+    position: relative;
+}
+
+.project-item-image img{
+    width: 12em;
+    height: 8em;
+    border-radius: 2em;
+}
+.project-item-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12em;
+    height: 8em;
+    border-radius: 2em;
+    opacity: 0;
+    transition: .3s ease;
+    padding-top: 0.5em;
+    background-color: rgba(0, 255, 42, 0.418);
+}
+.project-item-image-overlay:hover{
+    opacity: 1;
+}
+
+.project-header h1 a{
+    color: #01172F;
+}
+/*End projects*/
+
+/*Start Media queries*/
+
+@media screen and (max-width: 1200px) {
+    .top-nav{
+        display: none;
+    }
+    .menu-toggler{
+        display: flex;
+    }
+}
+/*End Media quries*/

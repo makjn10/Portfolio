@@ -12,6 +12,11 @@
 </head>
 <body>
     <header>
+        <div class="menu-toggler">
+            <div class="bar half start"></div>
+            <div class="bar"></div>
+            <div class="bar half end"></div>
+        </div>
         <div class="top-nav">
             <ul class="nav-list">
                 <li class="nav-list-item">
@@ -24,7 +29,7 @@
                     <a href="#journey" class="nav-link" data-text="Journey">Journey</a>
                 </li>
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link" data-text="Projects">Projects</a>
+                    <a href="#project" class="nav-link" data-text="Projects">Projects</a>
                 </li>
                 <li class="nav-list-item">
                     <a href="#" class="nav-link" data-text="Achievements">Achievements</a>
@@ -75,6 +80,13 @@
     </section>
 
     <section class="journey" id="journey">
+        <div class="journey-header">
+            <h1>
+                <a href="" class="typewrite" data-period="2600" data-type='[ "Journey" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>      
+        </div>
         <div class="journey-description">
             <ul class="timeline">
                 <li class="timeline-item">
@@ -142,25 +154,51 @@
                             <h6>
                                 X<sup>th</sup> CGPA : 10/10<br>
                                 XII<sup>th</sup> Percentage : 90.2%<br>
+                                X<sup>th</sup> standard representative<br>
+                                Selected for fully-sponsored London trip
                             </h6>
                         </div>
                     </div>
-                    
                 </li>
             </ul>
-        </div>
-        <div class="journey-header">
+        </div>     
+    </section>
+
+    <section class="project" id="project">
+        <div class="project-header">
             <h1>
-                <a href="" class="typewrite" data-period="2600" data-type='[ "Journey" ]'>
+                <a href="" class="typewrite" data-period="2600" data-type='[ "Projects" ]'>
                     <span class="wrap"></span>
                 </a>
             </h1>      
-        </div>
+        </div>   
+
+        <div class="project-description">
+            <ul class="project-list">
+                <li class="project-list-item">
+                    <div class="project-item-details">
+                        <div class="project-item-header">
+                            <h5>January 2020 - March 2020</h5>
+                            <h5>Swacch Bharat Web-Appication</h5>
+                        </div>
+                        <div class="project-item-description">
+                            <h6></h6>
+                        </div>
+                    </div>
+                    <div class="project-item-image">
+                        <img src="./swacch.JPG" alt="swacch">
+                        <div class="project-item-image-overlay">
+                            <p>
+                                Hello this is sample    
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>     
     </section>
 
-    
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
